@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MGEE and OLELA BOTS</title>
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fa;
+    color: #222;
+  }
+  header {
+    background: #0d47a1;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(13, 71, 161, 0.3);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  .header-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid #0d47a1;
+    margin-top: 0;
+  }
+  main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .section-title {
+    border-left: 6px solid #0d47a1;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #0d47a1;
+  }
+  .robots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .robot-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .robot-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+  }
+  .robot-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #0d47a1;
+  }
+  .robot-description {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    flex-grow: 1;
+    color: #444;
+  }
+  .robot-price {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #00796b;
+  }
+  .buy-btn {
+    display: inline-block;
+    background: #0d47a1;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .buy-btn:hover {
+    background: #1565c0;
+  }
+  #payment-section {
+    background: #e3f2fd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  }
+  #payment-section h2 {
+    color: #0d47a1;
+  }
+  .account {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    box-shadow: 0 1px 5px rgb(13 71 161 / 0.1);
+    font-size: 1.1rem;
+  }
+  .account strong {
+    color: #0d47a1;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    background: #0d47a1;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .whatsapp-link {
+    color: #25D366;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .whatsapp-link:hover {
+    text-decoration: underline;
+  }
+  .whatsapp-icon {
+    width: 22px;
+    height: 22px;
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+    .robots-grid {
+      grid-template-columns: 1fr;
+    }
+    footer {
+      font-size: 0.9rem;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>MGEE and OLELA BOTS</h1>
+  </header>
+  <img class="header-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Trading Market Chart" />
+  <main>
+    <section id="robots-section">
+      <h2 class="section-title">Available Trading Robots</h2>
+      <div class="robots-grid">
+        <article class="robot-card">
+          <h3 class="robot-name">RoboTrader Alpha</h3>
+          <p class="robot-description">Aggressive scalping bot designed for high-frequency trading on forex markets.</p>
+          <p class="robot-price">R50</p>30 DAYS PLAN
+          <button class="buy-btn" onclick="alert('THIS IS THE MESSAGE VISIT US ON WHATSAPP VIA #+266 63088465')">Buy Now</button>
+        </article>
+        <article class="robot-card">
+          <h3 class="robot-name">Nasdaq SwingBot</h3>
+          <p class="robot-description">Optimized for swing trading with smart entry and exit signals on NASDAQ stocks.</p>
+          <p class="robot-price">R400</p>LIFE TIME
+          <button class="buy-btn" onclick="alert('<b> VISIT US ON WHATSAPP VIA #+266 63088465'<b/>)">Buy Now</button>
+        </article>
+        <article class="robot-card">
+          <h3 class="robot-name">Man Tee FX2</h3>
+          <p class="robot-description">Stable trading algorithm for forex pairs, focusing on risk management and steady growth.</p>
+          <p class="robot-price">R150</p>90 DAYS PLAN
+          <button class="buy-btn" onclick="alert('THIS IS THE MESSAGE VISIT US ON WHATSAPP VIA #+266 63088465')">Buy Now</button>
+        </article>
+      </div>
+    </section>
+    <section id="payment-section">
+      <h2>Payment Information</h2>
+      <p>Please use one of the following accounts when making your payment. Include the reference so we can track your purchase.</p>
+      <div class="account">
+        <p><strong>NEDBANK:</strong> 10206044753</p>
+        <p><strong>Reference:</strong> man tee fx2</p>
+      </div>
+      <div class="account">
+        <p><strong>CAPITEC:</strong> 22714111072</p>
+        <p><strong>Reference:</strong> MR nasdaq</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>&copy; 2024 MGEE and OLELA BOTS. All rights reserved.</div>
+    <a class="whatsapp-link" href="https://wa.me/26663088465" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+      <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366"><path d="M20.52 3.48A11.87 11.87 0 0012.066.001 11.885 11.885 0 001.683 19.43l-1.41 5.12 5.263-1.383A11.874 11.874 0 0022.5 11.94a11.832 11.832 0 00-1.978-8.46zm-8.46 16.096a9.245 9.245 0 01-4.812-1.417l-.345-.205-3.12.818.83-3.037-.19-.31a9.253 9.253 0 1111.05 3.15 9.205 9.205 0 01-3.41.942zm5.338-6.533c-.296-.147-1.75-.864-2.02-.962-.27-.098-.466-.147-.663.147s-.76.962-.933 1.16c-.173.197-.347.22-.642.074-.296-.147-1.247-.46-2.377-1.46-.88-.785-1.47-1.75-1.645-2.045-.173-.296-.018-.455.13-.6.134-.134.296-.347.445-.52.15-.172.198-.296.297-.494.098-.197.05-.37-.025-.52-.075-.147-.663-1.6-.908-2.19-.24-.576-.48-.495-.663-.505-.17-.007-.37-.007-.57-.007a1.25 1.25 0 00-.895.42c-.31.31-1.186 1.163-1.186 2.83s1.215 3.287 1.384 3.51c.17.22 2.39 3.647 5.787 5.11.81.35 1.44.558 1.933.714.812.27 1.55.232 2.132.14.65-.103 1.99-.812 2.27-1.598.28-.786.28-1.46.196-1.598-.082-.134-.296-.22-.592-.37z"/></svg>
+      WhatsApp: +266 63088465/+27656460302/+27794375518
+    </a>FOR PROOF OF PAYMENT
+  </footer>
+</body>
+</html>
+
